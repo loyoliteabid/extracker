@@ -1,11 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import Routes from './app/routes';
+import Root from './app/root';
 
 export default function App() {
-  return (
-    <>
-      <StatusBar style="auto" />
-      <Routes />
-    </>
-  );
+  return <Root />;
 }
