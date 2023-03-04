@@ -2,6 +2,7 @@ import React from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import Colors from '../../../constants/Colors';
 import { ExpenceData } from '../../model/ObjectModal';
+import { getFormattedDate } from '../../utils/date';
 import { Text } from '../Themed';
 
 type Props = {
@@ -10,14 +11,14 @@ type Props = {
 
 const ExpenseItem: React.FC<Props> = (props) => {
   return (
-    <Pressable>
+    <Pressable style={({ pressed }) => pressed && styles.pressed}>
       <View style={styles.expenseItem}>
         <View>
           <Text style={[styles.textBase, styles.description]}>{props.item.description}</Text>
-          <Text style={styles.textBase}>{props.item.date.toDateString()}</Text>
+          <Text style={styles.textBase}>{getFormattedDate(props.item.date)}</Text>
         </View>
         <View style={styles.priceContainer}>
-          <Text style={styles.amount}>{props.item.amount}</Text>
+          <Text style={styles.amount}>{props.item.amount.toFixed(2)}</Text>
         </View>
       </View>
     </Pressable>
@@ -25,6 +26,9 @@ const ExpenseItem: React.FC<Props> = (props) => {
 };
 
 const styles = StyleSheet.create({
+  pressed: {
+    opacity: 0.75
+  },
   expenseItem: {
     padding: 12,
     marginVertical: 8,
