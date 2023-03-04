@@ -2,11 +2,11 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Configs } from '../../../configs';
 import Colors from '../../../constants/Colors';
-import { ExpenceData } from '../../model/ObjectModal';
+import { ExpenseData } from '../../model/ObjectModal';
 import { Text } from '../Themed';
 
 type Props = {
-  expenses: ExpenceData[];
+  expenses: ExpenseData[];
   periodName: string;
 };
 

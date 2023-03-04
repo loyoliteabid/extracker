@@ -1,12 +1,12 @@
 import React from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import Colors from '../../../constants/Colors';
-import { ExpenceData } from '../../model/ObjectModal';
+import { ExpenseData } from '../../model/ObjectModal';
 import { getFormattedDate } from '../../utils/date';
 import { Text } from '../Themed';
 
 type Props = {
-  item: ExpenceData;
+  item: ExpenseData;
 };
 
 const ExpenseItem: React.FC<Props> = (props) => {

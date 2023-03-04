@@ -6,9 +6,9 @@ import { Ionicons } from '@expo/vector-icons';
 import { Platform } from 'react-native';
 
 // Local modules
-import ManageExpense from '../screens/ManageExpense';
-import RecentExpenses from '../screens/RecentExpenses';
-import AllExpenses from '../screens/AllExpenses';
+import ManageExpense from '../screens/expenses/ManageExpense';
+import RecentExpenses from '../screens/expenses/RecentExpenses';
+import AllExpenses from '../screens/expenses/AllExpenses';
 import Colors from '../../constants/Colors';
 import IconButton from '../ui/IconButton';
 

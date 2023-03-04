@@ -3,12 +3,12 @@ import { StyleSheet, View } from 'react-native';
 
 // Local modules
 import Colors from '../../../constants/Colors';
-import { ExpenceData } from '../../model/ObjectModal';
+import { ExpenseData } from '../../model/ObjectModal';
 import ExpenseList from './ExpensesList';
 import ExpenseSummary from './ExpenseSummary';
 
 type Props = {
-  expenses: ExpenceData[];
+  expenses: ExpenseData[];
   periodName: string;
 };
 

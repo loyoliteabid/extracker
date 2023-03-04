@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { ExpenseState } from '../model/SliceModal'
+import { ExpenseState } from '../../model/SliceModal';
+
 
 const initialState: ExpenseState = {
   expenses: []

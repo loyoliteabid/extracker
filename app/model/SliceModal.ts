@@ -1,5 +1,5 @@
-import { ExpenceData } from "./ObjectModal";
+import { ExpenseData } from "./ObjectModal";
 
 export interface ExpenseState {
-  expenses: ExpenceData[]
+  expenses: ExpenseData[]
 }
