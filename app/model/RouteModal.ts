@@ -1,3 +1,7 @@
+import type { CompositeNavigationProp } from '@react-navigation/native';
+import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+
 /*
 Note: The type containing the mappings must be a type alias
 (e.g. type RootStackParamList = { ... }). It cannot be an interface
@@ -16,3 +20,8 @@ export type RootTabParamList = {
   recentExpenses: undefined;
   allExpenses: undefined;
 }
+
+export type ScreenNavigationProp = CompositeNavigationProp<
+  BottomTabNavigationProp<RootTabParamList>,
+  NativeStackNavigationProp<RootStackParamList>
+>;

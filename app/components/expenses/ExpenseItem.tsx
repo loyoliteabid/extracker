@@ -7,11 +7,12 @@ import { Text } from '../Themed';
 
 type Props = {
   item: ExpenseData;
+  onPress: () => void;
 };
 
 const ExpenseItem: React.FC<Props> = (props) => {
   return (
-    <Pressable style={({ pressed }) => pressed && styles.pressed}>
+    <Pressable onPress={props.onPress} style={({ pressed }) => pressed && styles.pressed}>
       <View style={styles.expenseItem}>
         <View>
           <Text style={[styles.textBase, styles.description]}>{props.item.description}</Text>
